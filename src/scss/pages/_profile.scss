@@ -1,0 +1,106 @@
+// Profile Page
+
+@use "../base/typography" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+.profile-top-section {
+  background-color: $blue-accent-text;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.large-user-image {
+  margin-right: 2rem;
+  width: 60px;
+}
+
+.profile-comp-section {
+  border: 1.6px solid $gray-border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.profile-bottom-section {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0 1rem;
+}
+
+.profile-bottom-left,
+.profile-bottom-right {
+  width: 40%;
+
+  .para-text {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  img {
+    margin-right: 1rem;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.profile-item-text {
+  width: 100%;
+}
+
+.profile-name-heading {
+  @include text($white-text, $medium-header-font, $light);
+}
+
+.plain-text-heading {
+  @include text($black-text, $input-font, $regular);
+  margin: 0 0 1rem;
+}
+
+.text-input {
+  @include text($black-text, $input-font, $regular);
+  border: 1.6px solid $gray-border;
+  margin: 0 0 1rem;
+  width: 80%;
+  padding: 0.4rem;
+  height: 34px;
+}
+
+// Media queries
+
+// 750
+@media (max-width: 750px) {
+  .profile-bottom-section,
+  .profile-item {
+    flex-direction: column;
+  }
+
+  .profile-item {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-item-text {
+    text-align: center;
+  }
+
+  .profile-bottom-left,
+  .profile-bottom-right {
+    width: 100%;
+  }
+
+  .profile-item img {
+    margin-bottom: 1rem;
+  }
+}

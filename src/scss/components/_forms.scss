@@ -1,0 +1,320 @@
+// Forms
+
+@use "../base/typography" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+.main-form {
+  border: 1.6px solid $gray-border;
+  border-width: 0px 1.6px 1.6px 1.6px;
+  width: 95%;
+  margin: 1rem auto 0;
+}
+
+.main-form-header,
+.main-form-header-declined {
+  @include text($white-text, $input-font, $regular);
+  letter-spacing: 0.03rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+}
+
+.main-form-header {
+  background-color: $blue-accent-text;
+}
+
+.main-form-header-declined {
+  background-color: $declined-text;
+}
+
+.top-form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.bottom-form-container {
+  padding: 2rem;
+  width: 100%;
+
+  .section-heading-overview {
+    text-align: center;
+  }
+
+  hr {
+    margin-bottom: 2rem;
+  }
+}
+
+.form-container-half-width {
+  width: 50%;
+  margin: 2rem auto 3rem;
+}
+
+.payment-request-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#hoursWorked,
+#clientProject,
+#itemDescription {
+  @include text($black-text, $input-font, $regular);
+  width: 100%;
+  border: 1.6px solid $gray-border;
+  margin: 0.5rem 0 1rem;
+  padding: 0.7rem 0.5rem;
+  height: 38px;
+}
+
+#required-hours-input {
+  margin-top: 1rem;
+}
+
+#admin-notes-input {
+  width: 100%;
+  text-align: left;
+}
+
+.smallest-form-item {
+  width: 20%;
+  padding: 0 1rem;
+}
+
+.small-form-item {
+  width: 30%;
+  padding: 0 1rem;
+}
+
+.large-form-item {
+  width: 50%;
+  padding: 0 1rem;
+}
+
+.form-item {
+  border: 1.6px solid $gray-border;
+  width: 30%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.widget-item {
+  border: 1.6px solid $gray-border;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 0;
+  width: 30%;
+  height: 250px;
+  position: relative;
+
+  .widget-footer-blue,
+  .widget-footer-purple,
+  .widget-footer-green {
+    width: 100%;
+    height: 10px;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+  }
+
+  .widget-footer-blue {
+    background-color: $blue-accent-text;
+  }
+
+  .widget-footer-purple {
+    background-color: $purple-text;
+  }
+
+  .widget-footer-green {
+    background-color: $progress-text;
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  input,
+  select {
+    width: 35%;
+    display: block;
+    margin: auto;
+  }
+}
+
+.form-item-large-outline,
+.form-item-large-no-outline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-item-large-outline {
+  border: 1.6px solid $gray-border;
+  padding: 1rem;
+  margin: 0 auto 1rem;
+}
+
+.container-outline {
+  border: 1.6px solid $gray-border;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto 1rem;
+}
+
+.container-top-margin {
+  margin-top: 2rem;
+}
+
+.form-item-large-outline-center {
+  border: 1.6px solid $gray-border;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.admin-input {
+  @include text($black-text, $input-font, $regular);
+  border: 1.6px solid $gray-border;
+  padding: 0.4rem;
+  margin-left: 1rem;
+  height: 36px;
+}
+
+.bold-figure {
+  @include text($black-text, $navigation-font, $bold);
+}
+
+.medium-figure {
+  @include text($black-text, $navigation-font, $regular);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.admin-form {
+  margin: 1.6rem auto;
+
+  label {
+    @include text($black-text, $para-font, $regular);
+  }
+
+  .text-input {
+    @include text($black-text, $para-font, $regular);
+    border: 1.6px solid $gray-border;
+    margin: 0.2rem auto 0.8rem;
+    width: 100%;
+    padding: 0.4rem;
+    height: 36px;
+  }
+
+  .text-input:focus,
+  .text-input:active {
+    border: 1.6px solid $gray-border;
+    outline-width: 0;
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+
+    option {
+      @include text($gray-text, $input-font, $light);
+    }
+  }
+}
+
+#quarter-input {
+  margin-top: 1rem;
+}
+
+// Media Queries
+
+// 1000
+@media (max-width: 1000px) {
+  .form-container-half-width {
+    width: 85%;
+  }
+}
+
+// 650
+@media (max-width: 650px) {
+  .top-form-container,
+  .payment-request-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    .form-item,
+    .smallest-form-item,
+    .small-form-item,
+    .large-form-item {
+      width: 90%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .bottom-form-container {
+    padding: 0;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr td {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .widget-item {
+    width: 80%;
+    margin-bottom: 1rem;
+
+    .section-heading-overview {
+      margin-top: 1rem;
+    }
+  }
+}
+
+// 500
+@media (max-width: 500px) {
+  .form-container-half-width {
+    width: 95%;
+
+    form input,
+    form .text-input {
+      width: 100%;
+    }
+  }
+
+  #quarter-input {
+    width: 100%;
+  }
+}
+
+// 350
+@media (max-width: 350px) {
+  .widget-item {
+    width: 100%;
+  }
+
+  .form-container-half-width form .form-button {
+    width: 80%;
+  }
+
+  .bold-figure {
+    font-size: 0.9rem;
+  }
+}

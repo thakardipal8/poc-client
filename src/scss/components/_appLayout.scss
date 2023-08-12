@@ -1,0 +1,45 @@
+// App Layout
+
+.app-layout {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.app-layout-header {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0.4rem 1rem;
+  width: 100%;
+}
+
+.app-layout-body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-layout-nav {
+  width: 18%;
+  min-height: 100vh;
+}
+
+.app-layout-hamburger {
+  display: none;
+}
+
+// Media Queries
+
+// 1050
+@media (max-width: 1050px) {
+  .app-layout-nav {
+    display: none;
+  }
+
+  .app-layout-hamburger {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+}

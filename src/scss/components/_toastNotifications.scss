@@ -1,0 +1,10 @@
+// Toast notification component
+
+@use "../base/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+.toast-notification {
+  @include text($black-text, $navigation-font, $light);
+  text-align: center;
+}

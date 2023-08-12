@@ -1,0 +1,30 @@
+// Typography
+
+// Google font import
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%; // Font-size 1em = 10px
+}
+
+// Font sizes
+$error-font: 0.7rem;
+$exterior-text-font: 0.8rem;
+$button-font: 0.85rem;
+$para-font: 0.9rem;
+$navigation-font: 1rem;
+$logo-font: 1rem;
+$logo-large: 1.2rem;
+$input-font: 0.9rem;
+$medium-header-font: 1.3rem;
+$large-header-font: 2rem;
+$section-header-font: 1rem;
+
+// Font weights
+$xx-light: 200;
+$x-light: 300;
+$light: 400;
+$regular: 500;
+$bold: 600;
+$x-bold: 700;

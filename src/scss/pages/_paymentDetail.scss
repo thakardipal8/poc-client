@@ -1,0 +1,21 @@
+// Interior Outlet Pages
+
+@use "../base/typography" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+#pending {
+  color: $pending-text;
+}
+
+#progress {
+  color: $progress-text;
+}
+
+#paid {
+  color: $blue-accent-text;
+}
+
+#declined {
+  color: $declined-text;
+}

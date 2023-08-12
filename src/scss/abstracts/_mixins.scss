@@ -1,0 +1,61 @@
+// Mixins
+
+@use "../abstracts/colors" as *;
+
+@mixin page-background {
+  background-color: $gray-background;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+}
+
+@mixin guest-page-content($height, $width) {
+  background-color: $white-background;
+  display: flex;
+  flex-direction: row;
+  height: $height;
+  width: $width;
+  box-shadow: rgba(149, 157, 165, 0.2) 10px 10px 24px;
+  max-height: 100%;
+}
+
+@mixin links($color, $size, $weight) {
+  border-bottom: 1.2px solid transparent;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 1s;
+}
+
+@mixin text($color, $size, $weight) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin button-one {
+  border-radius: 18px;
+  border: none;
+  color: $white-text;
+  cursor: pointer;
+  letter-spacing: 0.02rem;
+  transition: 1s;
+}
+
+@mixin button-two {
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  border: none;
+  color: $white-text;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 0.02rem;
+  transition: 1s;
+  padding: 0.7rem 0.5rem;
+  margin-top: 0.5rem;
+}

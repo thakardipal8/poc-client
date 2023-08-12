@@ -1,0 +1,43 @@
+// Payment Request Form
+
+@use "../base/typography" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+.payment-request-table {
+  width: 100%;
+  text-align: left;
+}
+
+th,
+td {
+  padding-bottom: 30px;
+}
+
+td {
+  @include text($black-text, $input-font, $light);
+}
+
+.table-heading {
+  @include text($black-text, $input-font, $regular);
+}
+
+#table-hours {
+  width: 15%;
+}
+
+#table-project {
+  width: 25%;
+}
+
+#table-delete {
+  width: 10%;
+}
+
+#table-description {
+  width: 50%;
+}
+
+.delete-icon {
+  cursor: pointer;
+}

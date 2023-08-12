@@ -1,0 +1,19 @@
+// Administrator Page
+
+@use "../base/typography" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+.admin-input {
+  @include text($black-text, $input-font, $regular);
+  border: 1.6px solid $gray-border;
+  margin: 0.5rem 0 1.5rem;
+  width: 100%;
+  padding: 0.4rem;
+  height: 34px;
+}
+
+.plain-text-heading {
+  @include text($black-text, $input-font, $regular);
+  margin: 0 0 1rem;
+}

@@ -1,0 +1,183 @@
+// Interior Outlet Pages
+
+@use "../base/typography" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 4rem;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.page-content {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.overview-button-section {
+  background-color: $light-gray-background;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  margin: 2rem auto;
+  width: 100%;
+}
+
+.overview-icon-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.overview-text-section {
+  text-align: center;
+}
+
+.centered-page-content {
+  border: 1.6px solid $gray-border;
+  margin: 5rem auto 0;
+  padding: 2rem 1rem;
+  width: 50%;
+}
+
+.centered-text-heading {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.internal-form {
+  width: 100%;
+}
+
+.page-heading {
+  @include text($black-text, $medium-header-font, $regular);
+  margin: 0;
+}
+
+.section-heading-overview {
+  @include text($black-text, $section-header-font, $bold);
+}
+
+.section-heading-blue {
+  @include text($blue-accent-text, $section-header-font, $bold);
+  text-align: center;
+}
+
+.section-heading-purple {
+  @include text($purple-text, $section-header-font, $bold);
+  text-align: center;
+}
+
+.section-heading {
+  @include text($black-text, $section-header-font, $bold);
+  margin-top: 4rem;
+}
+
+.para-text {
+  @include text($black-text, $para-font, $light);
+  margin: 0 0 1rem;
+}
+
+.warning-text {
+  @include text($declined-text, $para-font, $light);
+  margin: 0 0 1rem;
+  letter-spacing: 0.03rem;
+}
+
+.warning-bold-text {
+  @include text($declined-text, $para-font, $x-bold);
+  margin: 0 0 1rem;
+  cursor: pointer;
+}
+
+.bold-text {
+  @include text($black-text, $navigation-font, $x-bold);
+  cursor: pointer;
+}
+
+.button-icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 1rem;
+}
+
+.arrow-icon {
+  cursor: pointer;
+}
+
+.info-icon {
+  height: 35px;
+  width: 35px;
+}
+
+.underlined-link {
+  @include text($gray-text, $para-font, $light);
+  cursor: pointer;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.material-table-container {
+  margin-top: 2rem;
+}
+
+.centered-div-with-margin {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto 1rem;
+  width: 100%;
+}
+
+// Media Queries
+
+// 950
+@media (max-width: 950px) {
+  .page-layout {
+    padding: 2.5rem;
+  }
+}
+
+// 950
+@media (max-width: 750px) {
+  .page-layout {
+    padding: 2.5rem 2rem;
+  }
+}
+
+// 600
+@media (max-width: 600px) {
+  .page-layout {
+    padding: 2.5rem 1rem;
+  }
+}
+
+// 450
+@media (max-width: 450px) {
+  .page-layout {
+    padding: 2rem 0.5rem;
+  }
+
+  .overview-button-section .para-text {
+    text-align: center;
+  }
+}

@@ -1,0 +1,230 @@
+// Login, Signup and Reset Password Pages
+
+@use "../base/typography" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+.guest-page-background {
+  @include page-background;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.guest-page-content {
+  @include guest-page-content(80%, 60%);
+}
+
+.guest-page-content-two {
+  @include guest-page-content(auto, 60%);
+}
+
+.guest-page-heading {
+  @include text($black-text, $medium-header-font, $bold);
+  margin: 0;
+}
+
+.guest-para-text {
+  @include text($gray-text, $exterior-text-font, $regular);
+}
+
+.logo-text {
+  @include text($white-text, $logo-font, $light);
+  align-self: flex-end;
+}
+
+.logo-text-large {
+  @include text($white-text, $logo-large, $light);
+  align-self: flex-end;
+  margin-left: 1rem;
+}
+
+.welcome-text {
+  @include text(
+    $white-text,
+    clamp($medium-header-font, 2.5vw, $large-header-font),
+    $bold
+  );
+  align-self: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.plain-text-link {
+  @include links($gray-text, $exterior-text-font, $regular);
+}
+
+.plain-text-link:hover {
+  border-color: $gray-text;
+}
+
+.accent-link {
+  @include links($blue-accent-text, $exterior-text-font, $bold);
+}
+
+.accent-link:hover {
+  border-color: $blue-accent-text;
+}
+
+.error-message {
+  @include text($declined-text, $error-font, $bold);
+  margin: 0.5rem 0 0;
+}
+
+.paymate-logo {
+  display: flex;
+  height: 40px;
+  width: 30px;
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+.paymate-logo-small {
+  display: flex;
+  height: 30px;
+  width: 25px;
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+.guest-content-left {
+  width: 60%;
+  padding: 1rem;
+}
+
+.left-flex-content,
+.right-flex-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest-content-text {
+  align-self: center;
+  margin-bottom: 2rem;
+  width: 70%;
+}
+
+.guest-form {
+  margin: 1.6rem auto;
+
+  label {
+    @include text($gray-text, $exterior-text-font, $regular);
+  }
+
+  .text-input {
+    @include text($black-text, $input-font, $regular);
+    border: 1.6px solid $gray-border;
+    margin: 0.2rem auto 0.8rem;
+    width: 100%;
+    padding: 0.4rem;
+    height: 36px;
+  }
+
+  .text-input:focus,
+  .text-input:active {
+    border: 1.6px solid $gray-border;
+    outline-width: 0;
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+
+    option {
+      @include text($gray-text, $input-font, $light);
+    }
+  }
+
+  .icon-input {
+    @include text($black-text, $input-font, $regular);
+    border: none;
+    width: 90%;
+  }
+}
+
+.eye-icon {
+  width: 18px;
+  height: 13px;
+  cursor: pointer;
+}
+
+.guest-content-right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 1rem;
+}
+
+.password-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.6px solid $gray-border;
+  margin: 0.2rem auto 0.8rem;
+  width: 100%;
+  height: 36px;
+  padding: 0.4rem;
+}
+
+// Media queries
+
+// 1200
+@media (max-width: 1200px) {
+  .guest-page-content {
+    @include guest-page-content(90%, 80%);
+  }
+
+  .guest-page-content-two {
+    @include guest-page-content(auto, 80%);
+  }
+}
+
+// 900
+@media (max-width: 900px) {
+  .guest-content-left {
+    width: 70%;
+  }
+
+  .guest-content-right {
+    width: 30%;
+  }
+}
+
+// 500
+@media (max-width: 500px) {
+  .guest-content-left {
+    width: 100%;
+    display: block;
+    overflow: auto;
+    overflow-y: hidden;
+  }
+
+  .guest-content-right {
+    display: none;
+  }
+}
+
+// 400
+@media (max-width: 400px) {
+  .guest-page-content-two {
+    @include guest-page-content(95%, 80%);
+  }
+  .guest-content-text {
+    width: 90%;
+  }
+
+  .guest-page-heading {
+    margin-top: 1rem;
+  }
+}
+
+// 350
+@media (max-width: 350px) {
+  .guest-content-left {
+    overflow: auto;
+  }
+}
